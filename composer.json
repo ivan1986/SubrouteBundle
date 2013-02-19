@@ -12,11 +12,11 @@
         }
     ],
     "require": {
-        "symfony/framework-bundle": ">=2.1.0,<2.3-dev",
+        "symfony/framework-bundle": ">=2.1.0,<2.3-dev"
     },
     "require-dev": {
         "symfony/yaml": "*",
-        "symfony/twig-bundle": "*",
+        "symfony/twig-bundle": "*"
     },
     "autoload": {
         "psr-0": { "Ivan1986\\SubrouteBundle": "" }
