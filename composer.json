@@ -21,5 +21,5 @@
     "autoload": {
         "psr-0": { "Ivan1986\\SubrouteBundle": "" }
     },
-    "target-dir": "Ivan1986/SubrouteBundle",
+    "target-dir": "Ivan1986/SubrouteBundle"
 }
