@@ -3,7 +3,7 @@
     "type": "symfony-bundle",
     "description": "Allows child routers",
     "keywords": ["routing"],
-    "homepage": "",
+    "homepage": "https://github.com/ivan1986/SubrouteBundle",
     "license": "MIT",
     "authors": [
         {
@@ -12,7 +12,7 @@
         }
     ],
     "require": {
-        "symfony/framework-bundle": ">=2.1.0,<2.3-dev"
+        "symfony/framework-bundle": ">=2.1.0"
     },
     "require-dev": {
         "symfony/yaml": "*",

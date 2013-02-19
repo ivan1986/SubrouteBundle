@@ -22,12 +22,10 @@ one for all this urls, and logic one for all urls.
 
 Solution::
 
-Routing(/{user}/albums/{album}/{slug})
-run Controller
-continue Routing slug
-run other Controller
-
-    return $this->get('subrouter')->route('album', 'slug');
+    Routing(/{user}/albums/{album}/{slug})
+    run Controller
+    continue Routing slug whis $this->get('subrouter')->route('album', 'slug');
+    run other Controller
     
 Installation
 ------------
@@ -39,7 +37,7 @@ Recommended instalation is over Composer::
         // ...
         require: {
             // ...
-            "ivan1986/subroute": "master-dev"
+            "ivan1986/subroute": "dev-master"
         }
     }
 
