@@ -67,6 +67,7 @@ class Subrouting {
             'request' => $request->duplicate(),
             'routerName' => $this->curName,
             'componentName' => $componentName,
+            'router' => $this->container->get('router'),
         );
 
         /** @var Router */
@@ -78,13 +79,17 @@ class Subrouting {
         $context->setPathInfo('/'.$path);
         $context->setBaseUrl('');
         $this->matcher->setContext($context);
-        $r = $this->matcher->match($context->getPathInfo());
         $this->setController($request, $context);
         $request->attributes->add($addParams);
+        //override
+        if ($this->routes[$routerName]['rewrite'])
+            $this->container->set('router', $this->matcher);
         //call sub request
         $result = $this->container->get('http_kernel')->handle($request);
         //restore original request
         $lastRoute = array_pop($this->routesStack);
+        if ($this->routes[$routerName]['rewrite'])
+            $this->container->set('router', $lastRoute['router']);
         $this->container->set('request', $lastRoute['request']);
         $this->curName = $lastRoute['routerName'];
         return $result;

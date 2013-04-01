@@ -28,14 +28,14 @@ class RouterDefPass implements CompilerPassInterface {
         }
         $def = $container->getDefinition('router.default');
         $routes = $container->getParameter('subrouter.router_files');
-        foreach($routes as $name=>$file)
+        foreach($routes as $name=>$data)
         {
             $sr = new Definition($def->getClass(), $def->getArguments());
             $opt = $sr->getArgument(2);
             //change cache classes
             $opt['generator_cache_class'].='_'.$name;
             $opt['matcher_cache_class'].='_'.$name;
-            $sr->replaceArgument(1, $file);
+            $sr->replaceArgument(1, $data['file']);
             $sr->replaceArgument(2, $opt);
             $container->setDefinition('subrouter.router.'.$name, $sr);
         }
