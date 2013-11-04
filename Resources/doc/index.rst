@@ -68,4 +68,3 @@ Twig Extensions::
 
     {{ mysubpath('edit', {'id':id}) }}
     {{ path('album', { 'user': user, 'album': album, 'slug' : subpath('album', 'edit', {'id':id})}) }}
-    

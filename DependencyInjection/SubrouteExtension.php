@@ -2,7 +2,6 @@
 
 namespace Ivan1986\SubrouteBundle\DependencyInjection;
 
-use Ivan1986\DemoBundle\DependencyInjection\Compiler\RouterDefPass;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Loader\XmlFileLoader;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;

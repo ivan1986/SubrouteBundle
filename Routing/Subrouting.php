@@ -2,7 +2,6 @@
 
 namespace Ivan1986\SubrouteBundle\Routing;
 
-
 use Psr\Log\LoggerInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\HttpFoundation\Request;
@@ -11,9 +10,7 @@ use Symfony\Component\HttpKernel\Exception\MethodNotAllowedHttpException;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\Routing\Exception\MethodNotAllowedException;
 use Symfony\Component\Routing\Exception\ResourceNotFoundException;
-use Symfony\Component\Routing\Exception\RouteNotFoundException;
 use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
-use Symfony\Component\Routing\Matcher\RequestMatcherInterface;
 use Symfony\Component\Routing\RequestContext;
 
 class Subrouting {
@@ -78,7 +75,6 @@ class Subrouting {
         $context->setPathInfo('/'.$path);
         $context->setBaseUrl('');
         $this->matcher->setContext($context);
-        $r = $this->matcher->match($context->getPathInfo());
         $this->setController($request, $context);
         $request->attributes->add($addParams);
         //call sub request

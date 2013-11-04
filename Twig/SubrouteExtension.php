@@ -1,17 +1,8 @@
 <?php
-/**
- * Created by JetBrains PhpStorm.
- * User: ivan
- * Date: 19.02.13
- * Time: 10:40
- * To change this template use File | Settings | File Templates.
- */
 
 namespace Ivan1986\SubrouteBundle\Twig;
 
-
 use Ivan1986\SubrouteBundle\Routing\Subrouting;
-use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 
 class SubrouteExtension extends \Twig_Extension
 {

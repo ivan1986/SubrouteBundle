@@ -1,11 +1,4 @@
 <?php
-/**
- * Created by JetBrains PhpStorm.
- * User: ivan
- * Date: 18.02.13
- * Time: 17:03
- * To change this template use File | Settings | File Templates.
- */
 
 namespace Ivan1986\SubrouteBundle\DependencyInjection\Compiler;
 
