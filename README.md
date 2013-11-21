@@ -3,6 +3,14 @@ Ivan1986SubrouteBundle
 
 Extension for multiple rourets
 
+install default by composer:
+
+    "ivan1986/subroute": "*",
+
+Initialize the bundle:
+
+    new Ivan1986\SubrouteBundle\SubrouteBundle(),
+
 What It Do
 ----------
 
